@@ -12,10 +12,18 @@ ultralytics = "^8.3.23"
 torch = {version = "2.4.1", source = "pytorch"}
 torchvision = {version = "0.19.1", source = "pytorch"}
 torchaudio = {version = "2.4.1", source = "pytorch"}
+paho-mqtt = "^2.1.0"
+dash = "^2.18.1"
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"  # 將此庫設定為主要庫
 
 [[tool.poetry.source]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"  # PyTorch 專屬庫
+
 
 [build-system]
 requires = ["poetry-core"]
