@@ -1,0 +1,5 @@
+boxes: ultralytics.engine.results.Boxes object
+keypoints: None
+masks: None
+names: {0: 'drive', 1: 'parking-grid', 2: 'red_line'}
+obb: None
