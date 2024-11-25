@@ -2,4 +2,4 @@
 /yolo/video
 /runs
 */__pycache__
-*/test
+test
