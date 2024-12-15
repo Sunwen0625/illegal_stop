@@ -8,3 +8,4 @@
 - 資料上傳至資料庫
 
 ## 使用方法
+執行 yolo/predict.py 跟 mqtt/main.py
