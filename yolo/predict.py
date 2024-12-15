@@ -8,7 +8,7 @@ from queue import Queue
 
 def init_mqtt() -> mqtt.Client:
     """初始化 MQTT 客戶端並連線到伺服器"""
-    client = mqtt.Client()
+    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     client.connect("broker.emqx.io", 1883, 60)
     client.loop_start()  # 在初始化時啟動 loop
     return client
@@ -94,7 +94,8 @@ def process_frames(model: YOLO, cap: cv2.VideoCapture, detection_queue: Queue) -
 
 
 def main():
-    FRAME_SOURCE = 0  # 攝影機
+    #FRAME_SOURCE = "http://192.168.71.66:8080/video"  # 攝影機
+    FRAME_SOURCE = 0
     MODEL_PATH = "yolov8s.pt"  # 模型檔案
 
     # 初始化 MQTT 客戶端
